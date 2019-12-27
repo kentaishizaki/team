@@ -1,0 +1,54 @@
+DirectoryIndex index.php
+Options -Indexes
+AuthUserFile /home/k-ishizaki/www/.htpasswd
+AuthType Basic
+AuthName "Web access"
+Satisfy all
+Order deny,allow
+
+AddDefaultCharset utf-8
+
+RewriteEngine on
+
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://team.k-ishizaki.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} .+\.sakura\.ne\.jp
+RewriteRule ^.*$ - [R=404,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteBase /
+RewriteCond %{REQUEST_URI} !(^/$)
+RewriteCond %{REQUEST_URI} !(^/index.php)
+RewriteCond %{REQUEST_URI} !(^/home.php)
+RewriteCond %{REQUEST_URI} !(^/registerDiary.php)
+RewriteCond %{REQUEST_URI} !(^/deleteDiary.php)
+RewriteCond %{REQUEST_URI} !(^/registerMessage.php)
+RewriteCond %{REQUEST_URI} !(^/userCreate.php)
+RewriteCond %{REQUEST_URI} !(^/logout.php)
+RewriteCond %{REQUEST_URI} !(^/css/style_index.css)
+RewriteCond %{REQUEST_URI} !(^/css/style_home.css)
+RewriteCond %{REQUEST_URI} !(^/css/style_register.css)
+RewriteCond %{REQUEST_URI} !(^/css/style_logout.css)
+RewriteCond %{REQUEST_URI} !(^/css/style_userCreate.css)
+RewriteCond %{REQUEST_URI} !(^/js/menu.js)
+RewriteCond %{REQUEST_URI} !(^/js/loadAllMessage.js)
+RewriteCond %{REQUEST_URI} !(^/js/reload.js)
+RewriteCond %{REQUEST_URI} !(^/robots\.txt)
+RewriteCond %{REQUEST_URI} !(^/sitemap\.xml)
+RewriteCond %{REQUEST_URI} !(^/day/)
+RewriteCond %{REQUEST_URI} !(^/day/index.php)
+RewriteCond %{REQUEST_URI} !(^/day/register.php)
+RewriteCond %{REQUEST_URI} !(^/day/check.php)
+RewriteCond %{REQUEST_URI} !(^/day/css/style.css)
+RewriteCond %{REQUEST_URI} !(^/day/images/circle.png)
+RewriteCond %{REQUEST_URI} !(^/day/images/circle_checked.png)
+RewriteCond %{REQUEST_URI} !(^/day/images/cross.png)
+RewriteCond %{REQUEST_URI} !(^/day/images/cross_checked.png)
+RewriteRule ^(.*)$ / [R=301,L]
+
