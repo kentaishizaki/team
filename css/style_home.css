@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+
+/* ページ全体 */
+body {
+
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	-webkit-text-size-adjust: 100%;   /* iPhone・Safari自動フォントリサイズ対策 */
+	font-family: "Hiragino Maru Gothic W2 JIS2004";
+
+}
+
+h1 {
+
+	border-left: 10px solid #ffa500;
+	font-size: 6.0vmin;
+
+}
+h2 {
+
+	border-left: 10px solid #ffa500;
+	font-size: 5.0vmin;
+
+}
+
+.button input {
+
+	width: 30vmax;
+	height: 3.0em;
+	font-size: 4.0vmin;
+	border-radius: 0;
+	background-color: #ffa500;
+	margin-top: 5vmin;
+	margin-bottom: 5vmin;
+	margin-left: 1vmax;
+
+}
+.button input:hover {
+
+	opacity: 0.5;
+
+}
+table {
+
+	width: 90vw;
+	margin-bottom: 20vmin;
+	align: center;
+
+}
+table.contents, table.contents td {
+
+	border: 2px solid #ffa500;
+
+}
+table tr {
+
+	font-size: 4.0vmin;
+
+}
+table tr td.left {
+
+	width: 20vmax;
+
+}
+table tr td.right {
+
+	width: 30vmax;
+
+}
+table input {
+
+	width: 30vmax;
+	height: 2.0em;
+	font-size: 4.0vmin;
+	line-height: 2.0em;
+
+}
+table textarea#message {
+
+	width: 80vmax;
+	height: 8.0em;
+	font-size: 4.0vmin;
+	line-height: 2.0em;
+
+}
+table textarea#goodPoint {
+
+	width: 30vmax;
+	height: 6.0em;
+	font-size: 4.0vmin;
+	line-height: 2.0em;
+
+}
+table textarea#issues {
+
+	width: 30vmax;
+	height: 4.0em;
+	font-size: 4.0vmin;
+	line-height: 2.0em;
+
+}
+
+a.garbage {
+
+	text-decoration: none;
+	color: #0000ff;
+
+}
+td.garbage {
+
+	width: 5vmax;
+	text-align: center;
+
+}
+
+div#diary {
+
+	display: none;
+
+}
+
+div#allMessage {
+
+	display: none;
+
+}
+
+div#reload {
+
+	visibility: hidden;
+
+}

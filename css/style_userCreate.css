@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+
+/* ページ全体 */
+body {
+
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	-webkit-text-size-adjust: 100%;   /* iPhone・Safari自動フォントリサイズ対策 */
+	font-family: "Hiragino Maru Gothic W2 JIS2004";
+
+}

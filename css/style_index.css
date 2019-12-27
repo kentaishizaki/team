@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+
+/* ページ全体 */
+body {
+
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	-webkit-text-size-adjust: 100%;   /* iPhone・Safari自動フォントリサイズ対策 */
+	font-family: "Hiragino Maru Gothic W2 JIS2004";
+
+}
+h1 {
+
+	border-left: 10px solid #ffa500;
+	font-size: 6.0vmin;
+
+}
+h2 {
+
+	border-left: 10px solid #ffa500;
+	font-size: 5.0vmin;
+
+}
+form {
+
+	margin-bottom: 20vmin;
+
+}
+form tr {
+
+	font-size: 4.0vmin;
+
+}
+form tr td.left {
+
+	width: 20vmax;
+
+}
+form tr td.right {
+
+	width: 30vmax;
+
+}
+form input {
+
+	width: 30vmax;
+	height: 2.0em;
+	font-size: 4.0vmin;
+	line-height: 2.0em;
+
+}
+form input::placeholder {
+
+	font-size: 2.0vmin;
+
+}
+form tr#button1 input[type="submit"] {
+
+	width: 20vmax;
+	height: 3.0em;
+	font-size: 4.0vmin;
+	border-radius: 0;
+	background-color: #ffa500;
+
+}
+form tr#button1 input[type="submit"]:hover {
+
+	opacity: 0.5;
+
+}
+form tr#button2 input[type="submit"] {
+
+	width: 20vmax;
+	height: 2.0em;
+	font-size: 3.0vmin;
+	border-radius: 0;
+	background-color: #ffa500;
+
+}
+form tr#button2 input[type="submit"]:hover {
+
+	opacity: 0.5;
+
+}
+select#leader {
+
+	font-size: 4.0vmin;
+
+}
